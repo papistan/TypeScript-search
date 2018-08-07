@@ -1,5 +1,8 @@
 import * as React from "react";
 
+// tslint:disable-next-line:no-console
+console.log(process.env.REACT_APP_CLIENT_ID);
+
 interface IProps {
   countBy?: number;
 }
