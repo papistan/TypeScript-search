@@ -26,7 +26,7 @@ class Search extends React.Component<{}, IState> {
           value={this.state.location}
           onChange={this.onInputChange}
         />
-        <p> {this.state.location}</p>
+        <p>{this.state.location}</p>
       </div>
     );
   }
