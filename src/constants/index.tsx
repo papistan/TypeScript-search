@@ -1,0 +1,3 @@
+export const CHANGE_LOCATION = "CHANGE_LOCATION";
+export type CHANGE_LOCATION = typeof CHANGE_LOCATION;
+
