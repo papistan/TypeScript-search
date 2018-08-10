@@ -10,27 +10,32 @@ interface IState {
   location: string;
 }
 
-class Search extends React.Component<IState> {
-  public state: IState = { location: "oakland" };
+class Search extends React.Component<{}, IState> {
+  constructor(props: any) {
+    super(props);
+    this.state = { location: "" };
+  }
 
-  render() {
+  public render() {
     return (
       <div className="search-bar">
         <h6> Location</h6>
         <div id="magnifying-glass" />
         <input
-          placeholder="Location"
+          placeholder="oakland"
           value={this.state.location}
-          onChange={event => this.onInputChange(event.target.value)}
+          onChange={this.onInputChange}
         />
+        <p> {this.state.location}</p>
       </div>
     );
   }
 
-  onInputChange(term) {
-    this.setState({ term });
-    this.props.onSearchTermChange(term);
-  }
+  private onInputChange = (e: any) => {
+    const term = e.target.value;
+    this.setState({ location: term });
+    // this.props.onSearchTermChange(term);
+  };
 }
 
 export default Search;

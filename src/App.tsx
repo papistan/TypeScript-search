@@ -1,8 +1,8 @@
 import * as React from "react";
 import "./App.css";
-import Description from "./Description";
-import Header from "./header";
-import Search from "./search";
+import Description from "./components/Description";
+import Header from "./components/header";
+import Search from "./components/search";
 
 class App extends React.Component {
   public render() {
