@@ -1,8 +1,9 @@
 import * as React from "react";
 import "./App.css";
-import Description from "./components/Description";
+import DisplayEvents from "./components/displayEvents";
 import Header from "./components/header";
 import Search from "./components/search";
+
 
 class App extends React.Component {
   public render() {
@@ -10,7 +11,7 @@ class App extends React.Component {
       <div>
         <Header />
         <Search />
-        <Description countBy={3} />
+        <DisplayEvents />
       </div>
     );
   }
