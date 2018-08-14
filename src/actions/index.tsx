@@ -20,9 +20,9 @@ export const receiveEvents = (location: string, json) => ({
   events: json.data.children.map(child => child.data)
 });
 
-const fetchEvents = (location: string) => dispatch => {
-  dispatch(requestPosts(subreddit));
+export const fetchEvents = (location: string) => dispatch => {
+  dispatch(requestEvents(location));
   return fetch(`https://www.reddit.com/r/${subreddit}.json`)
     .then(response => response.json())
-    .then(json => dispatch(receivePosts(subreddit, json)));
+    .then(json => dispatch(receiveEvents(location, json)));
 };
