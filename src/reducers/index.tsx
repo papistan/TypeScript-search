@@ -1,6 +1,9 @@
 import { combineReducers } from "redux";
-import search from "./search";
+import { changeLocation, events } from "./search";
 
-export default combineReducers({
-  search
+const rootReducer = combineReducers({
+  changeLocation,
+  events
 });
+
+export default rootReducer;

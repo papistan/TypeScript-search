@@ -9,7 +9,7 @@ export const changeLocation = (state = "oakland", action: object) => {
   }
 };
 
-const events = (
+export const events = (
   state = {
     events: []
   },
