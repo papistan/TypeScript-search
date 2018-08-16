@@ -14,10 +14,10 @@ export const requestEvents = (location: string) => ({
   location
 });
 
-export const receiveEvents = (location: string, json) => ({
+export const receiveEvents = (location: string, json: JSON) => ({
   type: constants.RECEIVE_EVENTS,
   location,
-  events: json.data.children.map(child => child.data)
+  events: json.data.children.map(child: object => child.data)
 });
 
 export const fetchEvents = (location: string) => dispatch => {

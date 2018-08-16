@@ -1,10 +1,10 @@
 import * as React from "react";
 
 interface IProps {
-    events: Object
+    events?: Object
 }
 
-const DisplayEvents: React.SFC<IProps> = (props: IProps) => {
+const Events: React.SFC<IProps> = (props: IProps) => {
 
   createEvents = (events: array) => {
     events.map(event => <Event id={event.id} event={event} />);
